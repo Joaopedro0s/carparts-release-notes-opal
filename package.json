@@ -1,0 +1,16 @@
+{
+  "name": "carparts-release-notes",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "lint": "node --check src/classifier.mjs && node --check src/release-notes.mjs && node --check scripts/eval-prompt.mjs && node --check scripts/benchmark-local.mjs",
+    "test": "node --test",
+    "eval": "node scripts/eval-prompt.mjs",
+    "benchmark": "node scripts/benchmark-local.mjs"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=22"
+  }
+}

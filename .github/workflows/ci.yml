@@ -1,0 +1,45 @@
+name: ci-release-notes
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths: ["prompts/**", "schemas/**", "eval/**", "src/**", "scripts/**", "test/**", "package*.json"]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  qualidade:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm test
+      - name: Scan de segredos
+        uses: gitleaks/gitleaks-action@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  avaliacao-prompt:
+    needs: qualidade
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Quality gate determinístico
+        env:
+          EVAL_MIN: "0.9"
+        run: npm run eval

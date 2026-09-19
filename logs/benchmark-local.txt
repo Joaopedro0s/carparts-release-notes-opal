@@ -1,0 +1,11 @@
+BENCHMARK LOCAL — PARTE AUTOMATIZADA (sem chamada Gemini)
+Data: 18/09/2026
+Ambiente: Node.js 24.19.0
+
+normal: 0.957 ms :: Nova funcionalidade: exportar pedido em PDF | Correção: corrige timeout no cálculo de frete | Segurança: bloqueia token expirado no portal B2B
+ignoraveis: 0.011 ms :: Nenhuma mudança publicável
+ambiguo: 0.067 ms :: Revisar: atualiza texto sem indicar impacto
+
+Média da parte automatizada: 0.345 ms
+Linha de base do cenário: 240 minutos por versão.
+Observação: o tempo de revisão humana não foi inventado; deve ser medido pelo revisor em homologação e somado ao tempo automatizado.

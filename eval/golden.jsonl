@@ -1,0 +1,10 @@
+{"id":"rel-001","input":"a1b2c3 feat(pedidos): exportar pedido em PDF","must_include":["Nova funcionalidade","PDF"],"must_not_include":["a1b2c3"]}
+{"id":"rel-002","input":"d4e5f6 fix(api): corrige timeout no cálculo de frete","must_include":["Correção","timeout"],"must_not_include":["d4e5f6"]}
+{"id":"rel-003","input":"77aa11 fix(auth): bloqueia token expirado no portal B2B","must_include":["Segurança","token expirado"],"must_not_include":["77aa11"]}
+{"id":"rel-004","input":"11bb22 refactor(catalogo): simplifica cache de produtos","must_include":["Interna","cache de produtos"],"must_not_include":["11bb22"]}
+{"id":"rel-005","input":"33cc44 feat(cotacao): adiciona filtro por validade","must_include":["Nova funcionalidade","filtro por validade"],"must_not_include":["33cc44"]}
+{"id":"rel-006","input":"55dd66 fix(portal): corrige falha ao abrir lista de pedidos","must_include":["Correção","falha ao abrir lista de pedidos"],"must_not_include":["55dd66"]}
+{"id":"rel-007","input":"66ee77 security(sessao): impede reutilização de sessão encerrada","must_include":["Segurança","sessão encerrada"],"must_not_include":["66ee77"]}
+{"id":"rel-008","input":"88ff99 chore(deps): bump eslint 9.12 to 9.13","must_include":["Nenhuma mudança publicável"],"must_not_include":["Nova funcionalidade"]}
+{"id":"rel-009","input":"Merge pull request #42 from carparts/release","must_include":["Nenhuma mudança publicável"],"must_not_include":["Correção"]}
+{"id":"rel-010","input":"99aa00 docs: atualiza texto sem indicar impacto","must_include":["Revisar","atualiza texto sem indicar impacto"],"must_not_include":["99aa00"]}

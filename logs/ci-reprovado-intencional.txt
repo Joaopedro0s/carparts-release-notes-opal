@@ -1,0 +1,18 @@
+EXECUÇÃO LOCAL REPRODUZÍVEL - 18/09/2026
+Cenário: FORCE_EVAL_FAILURE=1 para comprovar bloqueio do quality gate
+
+FAIL rel-001 :: saída intencionalmente inválida
+FAIL rel-002 :: saída intencionalmente inválida
+PASS rel-003 :: Segurança: bloqueia token expirado no portal B2B
+PASS rel-004 :: Interna: simplifica cache de produtos
+PASS rel-005 :: Nova funcionalidade: adiciona filtro por validade
+PASS rel-006 :: Correção: corrige falha ao abrir lista de pedidos
+PASS rel-007 :: Segurança: impede reutilização de sessão encerrada
+PASS rel-008 :: Nenhuma mudança publicável
+PASS rel-009 :: Nenhuma mudança publicável
+PASS rel-010 :: Revisar: atualiza texto sem indicar impacto
+Taxa de aprovação: 80.0% (8/10); mínimo 90%
+EXIT_CODE=1
+
+Resultado: QUALITY GATE REPROVADO COMO ESPERADO
+Observação: a falha foi injetada somente para demonstrar que a esteira impede a promoção abaixo do limiar.

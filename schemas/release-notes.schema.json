@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Release Notes Carparts",
+  "type": "object",
+  "required": ["itens", "rodape"],
+  "properties": {
+    "versao": { "type": "string" },
+    "itens": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["tipo", "resumo"],
+        "properties": {
+          "tipo": {
+            "type": "string",
+            "enum": ["Nova funcionalidade", "Correção", "Segurança", "Interna", "Revisar"]
+          },
+          "resumo": { "type": "string", "minLength": 1 },
+          "modulo": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "rodape": { "type": "string" }
+  },
+  "additionalProperties": false
+}
