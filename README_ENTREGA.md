@@ -8,6 +8,7 @@ RA: 26179863
 - **Repositório:** https://github.com/Joaopedro0s/carparts-release-notes-opal
 - **Opal publicada:** https://opal.google/app/1iaPjBVNf0VnYdBxJdqLpyeuC7KGIhqhn
 - **GitHub Actions:** https://github.com/Joaopedro0s/carparts-release-notes-opal/actions
+- **Execução CI aprovada:** https://github.com/Joaopedro0s/carparts-release-notes-opal/actions/runs/35412597910
 - **Workflow:** https://github.com/Joaopedro0s/carparts-release-notes-opal/blob/main/.github/workflows/ci.yml
 
 ## Arquivo principal

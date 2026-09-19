@@ -120,11 +120,11 @@ A ficha técnica foi versionada em https://github.com/Joaopedro0s/carparts-relea
 
 E4 · Ponte para o AI Studio (saída estruturada + código) (peso 20%)
 (74 palavras)
-A ponte foi implementada com prompt em https://github.com/Joaopedro0s/carparts-release-notes-opal/blob/main/prompts/release-notes.v3.md, JSON Schema em /schemas/release-notes.schema.json e JavaScript adaptado em /src/release-notes.mjs. A saída estruturada contém tipo, resumo e módulo; as mesmas três entradas do Opal têm critérios de equivalência documentados em /docs/e4-ai-studio.md. A chave GEMINI_API_KEY é lida somente do ambiente seguro, está ausente do Git e é representada apenas por nome em .env.example, nunca por valor real.
+A ponte foi implementada com prompt, JSON Schema e JavaScript adaptado no repositório https://github.com/Joaopedro0s/carparts-release-notes-opal. Os links diretos estão centralizados em https://github.com/Joaopedro0s/carparts-release-notes-opal/blob/main/docs/e4-ai-studio.md. A saída estruturada contém tipo, resumo e módulo; as mesmas três entradas do Opal têm critérios de equivalência documentados. A chave GEMINI_API_KEY é lida somente do ambiente seguro, está ausente do Git e é representada apenas por nome em .env.example, nunca por valor real.
 
 E5 · Quality gate de prompt no pipeline (peso 20%)
 (74 palavras)
-O quality gate está em https://github.com/Joaopedro0s/carparts-release-notes-opal/actions e no workflow /blob/main/.github/workflows/ci.yml. Ele executa npm ci, lint, testes unitários, Gitleaks e avaliação de dez casos do conjunto dourado, com limiar mínimo de 90 por cento. O repositório inclui log aprovado com 100 por cento, log reprovado intencionalmente com 80 por cento e código 1, CODEOWNERS para prompts, filtro de caminhos, Jenkinsfile alternativo e política de segredo fora do Git e dos logs.
+O quality gate foi aprovado em https://github.com/Joaopedro0s/carparts-release-notes-opal/actions/runs/35412597910; o workflow está em https://github.com/Joaopedro0s/carparts-release-notes-opal/blob/main/.github/workflows/ci.yml. Ele executa npm ci, lint, testes unitários, Gitleaks e avaliação de dez casos, com limiar de 90 por cento. O repositório inclui log aprovado com 100 por cento, reprovação intencional com 80 por cento e código 1, CODEOWNERS, filtro de caminhos, Jenkinsfile e política de segredo fora do Git e dos logs.
 
 E6 · Métricas, custo e plano de evolução (peso 10%)
 (80 palavras)

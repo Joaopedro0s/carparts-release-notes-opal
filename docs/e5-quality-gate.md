@@ -3,6 +3,7 @@
 ## Execução na nuvem
 
 - Actions: https://github.com/Joaopedro0s/carparts-release-notes-opal/actions
+- Execução real aprovada: https://github.com/Joaopedro0s/carparts-release-notes-opal/actions/runs/35412597910
 - Workflow: https://github.com/Joaopedro0s/carparts-release-notes-opal/blob/main/.github/workflows/ci.yml
 - Jenkinsfile alternativo: https://github.com/Joaopedro0s/carparts-release-notes-opal/blob/main/Jenkinsfile
 
@@ -22,3 +23,5 @@
 - Reprovado de propósito: [`logs/ci-reprovado-intencional.txt`](../logs/ci-reprovado-intencional.txt), 80% (8/10), código de saída 1.
 
 O repositório não contém chave Gemini. Quando houver chamada real, `GEMINI_API_KEY` deve existir apenas em GitHub Secrets ou em credencial do Jenkins e nunca pode aparecer em logs.
+
+Resultado da execução #1: `success`. Os jobs `qualidade` e `avaliacao-prompt` foram concluídos pela infraestrutura do GitHub Actions sobre o commit inicial da entrega.
